@@ -8,9 +8,12 @@ Die Pokémon sollen aus einer CSV Datei importiert werden (händisches Erfassen 
 ## Kampf
 Zu Beginn des Kampfs, werden dem Spieler die Stats seines Pokémons ausgegeben. Das könnte z.B so aussehen:
 
-Bulbasaur (80/100 ♥)  Squirtle (100/100 ♥)
-(1) Overgrow  Torrent
-(2) Chlorophyll  Rain Dish
+    Bulbasaur (80/100 ♥)  Squirtle (100/100 ♥)
+
+    (1) Overgrow  Torrent
+
+    (2) Chlorophyll  Rain Dish
+
 Bulbasaur ist dabei der Name des Pokémons. 80 seine aktuelle Gesundheit, 100 ist die maximale Gesundheit (HP google sheet) Overgrow und Chlorophyll sind dabei die beiden möglichen Attacken (abilities).
 
 Der Benutzer kann dann durch Angabe einer Zahl spezifizieren welche Attacke ausgewählt werden soll (1 oder 2 in unserem Fall). Bei einer fehlerhaften Angabe, solltest du den Benuter auffordern eine existierende Attacke zu wählen.
