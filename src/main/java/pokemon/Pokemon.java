@@ -14,7 +14,7 @@ class Pokemon {
         System.out.print("\t" + name.toUpperCase() + " Type(" + typ1 + "/" + typ2 + ")\n");
         try {
             BufferedReader bufferedReader = new BufferedReader(
-                    new FileReader("asciiArt/" + name +
+                    new FileReader("src/resources/asciiArt/" + name +
                             ".txt"));
             String currentLine = bufferedReader.readLine();
             while (currentLine != null) {
@@ -24,7 +24,7 @@ class Pokemon {
             bufferedReader.close();
         } catch (IOException e) {
             BufferedReader bufferedReader = new BufferedReader(
-                    new FileReader("asciiArt/PokemonLogo.txt"));
+                    new FileReader("src/resources/asciiArt/PokemonLogo.txt"));
             String currentLine = bufferedReader.readLine();
             while (currentLine != null) {
                 System.out.println(currentLine);

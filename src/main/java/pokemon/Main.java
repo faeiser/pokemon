@@ -31,11 +31,11 @@ public class Main {
     public static void csvReader() {
         try {
             CSVReader reader = new CSVReaderBuilder(
-                    new FileReader("PokemonList/pokemon.csv")).withSkipLines(1). // Skiping
+                    new FileReader("src/resources/PokemonList/pokemon.csv")).withSkipLines(1). // Skiping
             // firstline
             // as it is
             // header
-                            build();
+                    build();
             pokelist = reader.readAll().stream().map(data -> {
                 Pokemon csvObject = new Pokemon();
                 csvObject.setId(Integer.parseInt(data[0]));
@@ -64,7 +64,7 @@ public class Main {
     static void wellcome() throws IOException {
         System.out.println("----------------------------WELLCOME TO----------------------------");
         BufferedReader bufferedReader = new BufferedReader(
-                new FileReader("asciiArt/PokemonLogo.txt"));
+                new FileReader("src/resources/asciiArt/PokemonLogo.txt"));
         String currentLine = bufferedReader.readLine();
         while (currentLine != null) {
             System.out.println(currentLine);
@@ -112,7 +112,10 @@ public class Main {
         pokelist.get(playerSelection).art();
         System.out.print(" VS ");
         // AI selection
-        aiSelection = random.nextInt(pokelist.size() - 1);
+        do {
+            aiSelection = random.nextInt(pokelist.size() - 1);
+        } while (aiSelection == playerSelection);
+
         // Show Pokemon art
         pokelist.get(aiSelection).art();
         // System.out.println();
